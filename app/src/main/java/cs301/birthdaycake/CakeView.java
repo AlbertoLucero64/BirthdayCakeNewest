@@ -23,7 +23,8 @@ public class CakeView extends SurfaceView {
         stuck with hard-coded values here to ease the introduction for CS371 students.
      */
     public static final float cakeTop = 400.0f;
-    public static final float cakeLeft = 100.0f;
+    public static final float cakeLeft = 50;
+    public static final float cakeRight = 150;
     public static final float cakeWidth = 1200.0f;
     public static final float layerHeight = 200.0f;
     public static final float frostHeight = 50.0f;
@@ -120,7 +121,8 @@ public class CakeView extends SurfaceView {
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
         //Now a candle in the center
-        drawCandle(canvas, cakeLeft + cakeWidth/2 - candleWidth/2, cakeTop);
+        drawCandle(canvas, cakeLeft + (cakeWidth/2 - 150) - candleWidth/2, cakeTop);
+        drawCandle(canvas, cakeRight + (cakeWidth/2 + 50) - candleWidth/2, cakeTop);
 
     }//onDraw
 
